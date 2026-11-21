@@ -1,158 +1,63 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="am">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ስራ ፈላጊ</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#102b3a">
+<meta name="description" content="የቅርብ ጊዜ የሥራ ማስታወቂያዎችን ይፈልጉ።">
+<title>ሥራ ፈላጊ</title>
 <style>
-:root{
-  --bg:#f3f6f8; --card:#ffffff; --ink:#14232e; --muted:#5b6b76;
-  --line:#d9e1e7; --brand:#0b5d7a; --accent:#e0a200; --chip:#e4eef3;
-}
-@media (prefers-color-scheme:dark){
-  :root{--bg:#0f1a21; --card:#172630; --ink:#e8f0f4; --muted:#9bb0bc; --line:#26394555; --brand:#5cc0e0; --accent:#f2b705; --chip:#1f3441;}
-}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);
-  font-family:"Noto Sans Ethiopic","Nyala",system-ui,-apple-system,"Segoe UI",sans-serif;
-  line-height:1.5;padding-top:env(safe-area-inset-top)}
-header{background:var(--brand);color:#fff;padding:18px 16px 20px}
-header h1{margin:0 0 12px;font-size:22px}
-.search{display:flex;gap:8px;max-width:720px;margin:0 auto}
-.search input{flex:1;min-width:0;font:inherit;font-size:16px;padding:12px 14px;border:0;border-radius:10px;
-  background:#fff;color:#14232e}
-.search button{font:inherit;font-weight:600;padding:12px 18px;border:0;border-radius:10px;
-  background:var(--accent);color:#14232e;cursor:pointer}
-.wrap{max-width:720px;margin:0 auto}
-.hint{margin:8px 0 0;font-size:13px;opacity:.85}
-.chips{display:flex;gap:8px;overflow-x:auto;padding:12px 16px;max-width:720px;margin:0 auto;scrollbar-width:none}
-.chips::-webkit-scrollbar{display:none}
-.chip{flex:none;font:inherit;font-size:14px;padding:6px 14px;border-radius:999px;border:1px solid var(--line);
-  background:var(--chip);color:var(--ink);cursor:pointer}
-.chip.on{background:var(--brand);color:#fff;border-color:var(--brand)}
-main{max-width:720px;margin:0 auto;padding:0 16px 40px}
-.count{color:var(--muted);font-size:14px;margin:4px 0 12px}
-.job{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin-bottom:12px}
-.meta{display:flex;justify-content:space-between;gap:8px;color:var(--muted);font-size:13px;margin-bottom:8px}
-.text{white-space:pre-wrap;word-break:break-word;font-size:15px;max-height:9.5em;overflow:hidden}
-.job.open .text{max-height:none}
-.row{display:flex;gap:16px;margin-top:10px}
-.row button,.row a{font:inherit;font-size:14px;font-weight:600;color:var(--brand);background:none;border:0;padding:4px 0;cursor:pointer;text-decoration:none}
-mark{background:var(--accent);color:#14232e;border-radius:3px;padding:0 2px}
-.empty{text-align:center;color:var(--muted);padding:40px 16px}
-button:focus-visible,input:focus-visible,a:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+:root{color-scheme:light;--bg:#f3f6f8;--surface:#fff;--ink:#152b36;--muted:#647681;--line:#dce5e9;--brand:#0c536d;--brand2:#167a91;--accent:#f3b51b;--soft:#e8f2f5;--danger:#b33b36;--shadow:0 8px 24px #1537470d}
+@media(prefers-color-scheme:dark){:root{color-scheme:dark;--bg:#0d171d;--surface:#15232b;--ink:#edf4f6;--muted:#a4b5bd;--line:#2b3d47;--brand:#74c9e2;--brand2:#9adced;--accent:#f4c64f;--soft:#1c3440;--danger:#ff8b80;--shadow:0 8px 24px #0003}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans Ethiopic","Nyala",system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.55;padding-bottom:calc(82px + env(safe-area-inset-bottom))}
+button,input{font:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible,a:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.hero{background:linear-gradient(135deg,#0c3448,#0b6478);color:white;padding:calc(18px + env(safe-area-inset-top)) 18px 22px}
+.wrap{width:min(760px,100%);margin:auto}.brandrow{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:15px}.brand{display:flex;align-items:center;gap:11px}.logo{width:44px;height:44px;border-radius:14px;background:#ffffff20;display:grid;place-items:center;font-size:25px}.brand h1{font-size:22px;margin:0;line-height:1.2}.brand p{margin:2px 0 0;color:#d6e9ef;font-size:12px}.iconbtn{border:1px solid #ffffff55;background:#ffffff12;color:white;border-radius:12px;width:42px;height:42px;font-size:19px}
+.search{display:flex;gap:8px;background:white;border-radius:15px;padding:5px;box-shadow:0 8px 22px #001b2a35}.search input{border:0;outline:0;min-width:0;flex:1;padding:10px 12px;color:#152b36;background:transparent;font-size:16px}.search button{border:0;border-radius:11px;background:#f3b51b;color:#192d36;font-weight:800;padding:9px 17px}.hint{font-size:12px;color:#d6e9ef;margin:8px 3px 0}
+main{max-width:760px;margin:auto;padding:14px 16px 30px}.toolbar{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:2px 0 12px}.count{font-size:13px;color:var(--muted)}.actions{display:flex;gap:7px}.smallbtn{border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:10px;padding:7px 10px;font-size:13px}
+.tabs{display:flex;gap:8px;margin:0 0 12px}.tab{border:1px solid var(--line);background:var(--surface);color:var(--muted);border-radius:999px;padding:7px 14px;font-size:13px}.tab.active{background:var(--brand);border-color:var(--brand);color:white}
+.chips{display:flex;gap:8px;overflow:auto;padding:0 0 13px;scrollbar-width:none}.chips::-webkit-scrollbar{display:none}.chip{flex:none;border:1px solid var(--line);background:var(--soft);color:var(--ink);border-radius:999px;padding:6px 12px;font-size:13px}.chip.active{background:var(--brand);border-color:var(--brand);color:white}
+.job{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:14px;margin:0 0 11px;box-shadow:var(--shadow)}.meta{display:flex;align-items:center;justify-content:space-between;gap:8px;color:var(--muted);font-size:12px;margin-bottom:8px}.channel{font-weight:700;color:var(--brand2)}.jobtext{white-space:pre-wrap;overflow-wrap:anywhere;font-size:14px;max-height:8.5em;overflow:hidden}.job.open .jobtext{max-height:none}.jobfoot{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-top:12px;padding-top:9px;border-top:1px solid var(--line)}.jobfoot button,.jobfoot a{border:0;background:none;color:var(--brand2);font-size:13px;font-weight:750;text-decoration:none;padding:3px 0}.jobfoot .save{margin-left:auto;color:var(--muted)}.jobfoot .saved{color:#d18a00}.empty{background:var(--surface);border:1px dashed var(--line);border-radius:16px;text-align:center;color:var(--muted);padding:34px 18px;margin-top:8px}.empty strong{display:block;color:var(--ink);font-size:16px;margin-bottom:5px}.toast{position:fixed;left:50%;bottom:calc(90px + env(safe-area-inset-bottom));transform:translateX(-50%);background:#172d38;color:#fff;padding:10px 16px;border-radius:12px;font-size:13px;box-shadow:0 6px 24px #0004;opacity:0;pointer-events:none;transition:opacity .2s;z-index:5}.toast.show{opacity:1}.bottom{position:fixed;bottom:0;left:0;right:0;background:var(--surface);border-top:1px solid var(--line);padding:8px 12px calc(8px + env(safe-area-inset-bottom));display:flex;justify-content:center;z-index:4}.bottominner{width:min(760px,100%);display:flex;justify-content:space-around}.navbtn{border:0;background:none;color:var(--muted);display:grid;gap:1px;justify-items:center;font-size:11px;padding:4px 16px}.navbtn span{font-size:20px}.navbtn.active{color:var(--brand2);font-weight:800}mark{background:var(--accent);color:#152b36;border-radius:3px;padding:0 2px}
+@media(min-width:600px){main{padding-top:20px}.hero{padding-bottom:26px}.job{padding:17px 18px}}
 </style>
 </head>
 <body>
-<header>
-  <div class="wrap">
-    <h1>ስራ ፈላጊ</h1>
-    <form class="search" id="form">
-      <input id="q" list="positions" placeholder="የስራ ዓይነት ይምረጡ ወይም ይጻፉ" autocomplete="off" enterkeyhint="search">
-      <button type="submit">ፈልግ</button>
-    </form>
-    <datalist id="positions">
-      <option value="Nurse"><option value="ነርስ">
-      <option value="Accountant"><option value="ሂሳብ ሹም">
-      <option value="Manager"><option value="ሥራ አስኪያጅ">
-      <option value="Driver"><option value="ሹፌር">
-      <option value="Secretary"><option value="ፀሐፊ">
-      <option value="Engineer"><option value="መሐንዲስ">
-      <option value="Teacher"><option value="መምህር">
-      <option value="Doctor"><option value="ሐኪም">
-      <option value="Pharmacist"><option value="ፋርማሲስት">
-      <option value="Cashier"><option value="ገንዘብ ተቀባይ">
-      <option value="Sales"><option value="ሽያጭ">
-      <option value="Marketing"><option value="Finance">
-      <option value="Human Resource"><option value="Procurement">
-      <option value="Software"><option value="IT">
-      <option value="Security"><option value="Driver">
-      <option value="Auditor"><option value="Logistics">
-      <option value="Officer"><option value="Assistant">
-    </datalist>
-    <p class="hint">ከዝርዝሩ ይምረጡ ወይም የፈለጉትን ቃል ይጻፉ</p>
-  </div>
-</header>
-
-<div class="chips" id="chips"></div>
-
+<header class="hero"><div class="wrap">
+ <div class="brandrow"><div class="brand"><div class="logo" aria-hidden="true">ሥ</div><div><h1>ሥራ ፈላጊ</h1><p>የሥራ እድሎችዎን በቀላሉ ያግኙ</p></div></div><button class="iconbtn" id="refresh" aria-label="አድስ" title="አድስ">↻</button></div>
+ <form class="search" id="form"><input id="q" list="positions" placeholder="የሥራ ዓይነት ይፈልጉ..." autocomplete="off" enterkeyhint="search" aria-label="የሥራ ዓይነት"><button type="submit">ፈልግ</button></form>
+ <datalist id="positions"><option value="Nurse"><option value="ነርስ"><option value="Accountant"><option value="ሂሳብ ሹም"><option value="Manager"><option value="ሥራ አስኪያጅ"><option value="Driver"><option value="ሹፌር"><option value="Secretary"><option value="ፀሐፊ"><option value="Engineer"><option value="መሐንዲስ"><option value="Teacher"><option value="መምህር"><option value="Doctor"><option value="ሐኪም"><option value="Pharmacist"><option value="ፋርማሲስት"><option value="Cashier"><option value="ገንዘብ ተቀባይ"><option value="Sales"><option value="Marketing"><option value="Finance"><option value="Human Resource"><option value="Procurement"><option value="Software"><option value="IT"><option value="Security"><option value="Auditor"><option value="Logistics"><option value="Officer"><option value="Assistant"></datalist>
+ <p class="hint">ከዝርዝሩ ይምረጡ ወይም ቃል በመጻፍ ይፈልጉ</p>
+</div></header>
 <main>
-  <div class="count" id="count"></div>
-  <div id="list"></div>
+ <div class="tabs"><button class="tab active" id="allTab">ሁሉም ሥራዎች</button><button class="tab" id="savedTab">የተቀመጡ <span id="savedCount"></span></button></div>
+ <div class="chips" id="chips"></div>
+ <div class="toolbar"><div class="count" id="count" aria-live="polite">ማስታወቂያዎችን በማምጣት ላይ…</div><div class="actions"><button class="smallbtn" id="clear">አጽዳ</button></div></div>
+ <section id="list" aria-live="polite"></section>
 </main>
-
+<div class="toast" id="toast" role="status"></div>
+<nav class="bottom"><div class="bottominner"><button class="navbtn active" id="homeNav"><span>⌂</span>መነሻ</button><button class="navbtn" id="savedNav"><span>♡</span>የተቀመጡ</button><button class="navbtn" id="refreshNav"><span>↻</span>አድስ</button></div></nav>
 <script>
-const API = "https://job-api.huliyay4.workers.dev";
-const QUICK = ["Nurse","Accountant","Manager","Driver","Secretary","Engineer","Teacher","Sales","IT"];
-
-const $q = document.getElementById("q");
-const $list = document.getElementById("list");
-const $count = document.getElementById("count");
-const $chips = document.getElementById("chips");
-
-function esc(s){return s.replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
-function hl(text,q){
-  const safe = esc(text);
-  if(!q) return safe;
-  const re = new RegExp("("+q.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")+")","gi");
-  return safe.replace(re,"<mark>$1</mark>");
-}
-function fmtDate(d){
-  if(!d) return "";
-  const dt = new Date(d);
-  return isNaN(dt) ? "" : dt.toLocaleDateString("en-GB",{day:"numeric",month:"short",year:"numeric"});
-}
-
-function drawChips(active){
-  $chips.innerHTML = "";
-  QUICK.forEach(w=>{
-    const b = document.createElement("button");
-    b.type = "button";
-    b.className = "chip" + (active.toLowerCase()===w.toLowerCase() ? " on" : "");
-    b.textContent = w;
-    b.onclick = ()=>{ $q.value = (active.toLowerCase()===w.toLowerCase()) ? "" : w; search(); };
-    $chips.appendChild(b);
-  });
-}
-
-async function search(){
-  const q = $q.value.trim();
-  drawChips(q);
-  $count.textContent = "በመፈለግ ላይ…";
-  $list.innerHTML = "";
-  try{
-    const res = await fetch(API + "/?q=" + encodeURIComponent(q));
-    if(!res.ok) throw new Error(res.status);
-    const jobs = await res.json();
-    $count.textContent = q ? jobs.length + " ማስታወቂያ ተገኝቷል" : "የቅርብ ጊዜ " + jobs.length + " ማስታወቂያዎች";
-    if(!jobs.length){
-      $list.innerHTML = '<div class="empty">ለ"'+esc(q)+'" ምንም ማስታወቂያ አልተገኘም። ሌላ ቃል ይሞክሩ።</div>';
-      return;
-    }
-    jobs.forEach(j=>{
-      const el = document.createElement("div");
-      el.className = "job";
-      el.innerHTML =
-        '<div class="meta"><span>@'+esc(j.channel)+'</span><span>'+fmtDate(j.date)+'</span></div>'+
-        '<div class="text">'+hl(j.text,q)+'</div>'+
-        '<div class="row"><button type="button" class="more">ሙሉውን አሳይ</button>'+
-        '<a href="'+esc(j.link)+'" target="_blank" rel="noopener">በቴሌግራም ክፈት</a></div>';
-      const more = el.querySelector(".more");
-      more.onclick = ()=>{
-        el.classList.toggle("open");
-        more.textContent = el.classList.contains("open") ? "ጠቅለል አድርግ" : "ሙሉውን አሳይ";
-      };
-      $list.appendChild(el);
-    });
-  }catch(e){
-    $count.textContent = "";
-    $list.innerHTML = '<div class="empty">ማስታወቂያዎችን ማምጣት አልተቻለም። ኢንተርኔትዎን ያረጋግጡና እንደገና ይሞክሩ።</div>';
-  }
-}
-
-document.getElementById("form").addEventListener("submit",e=>{e.preventDefault();search();});
-$q.addEventListener("change",search);
-search();
+const API="https://job-api.huliyay4.workers.dev";
+const QUICK=["Nurse","Accountant","Manager","Driver","Secretary","Engineer","Teacher","Sales","IT"];
+const $=id=>document.getElementById(id), q=$("q"), list=$("list"), count=$("count");
+let jobs=[], mode="all", activeQuery="", requestNo=0;
+const STORE="sera-felagi-saved-v2", CACHE="sera-felagi-cache-v2";
+function readStore(key,fallback){try{return JSON.parse(localStorage.getItem(key))??fallback}catch{return fallback}}
+let saved=readStore(STORE,[]);
+function toast(msg){const t=$("toast");t.textContent=msg;t.classList.add("show");clearTimeout(toast.timer);toast.timer=setTimeout(()=>t.classList.remove("show"),2200)}
+function esc(s){return String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+function safeLink(v){try{const u=new URL(v);return ["https:","http:"].includes(u.protocol)?u.href:"#"}catch{return "#"}}
+function key(j){return String(j.link||"")+"|"+String(j.channel||"")+"|"+String(j.date||"")+"|"+String(j.text||"").slice(0,100)}
+function fmtDate(d){if(!d)return "";const dt=new Date(d);return Number.isNaN(dt.getTime())?"":dt.toLocaleDateString("en-GB",{day:"numeric",month:"short",year:"numeric"})}
+function highlighted(s,term){const safe=esc(s);if(!term)return safe;const re=new RegExp("("+term.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")+")","ig");return safe.replace(re,"<mark>$1</mark>")}
+function drawChips(){const root=$("chips");root.innerHTML="";QUICK.forEach(w=>{const b=document.createElement("button");b.className="chip"+(activeQuery.toLowerCase()===w.toLowerCase()?" active":"");b.textContent=w;b.onclick=()=>{q.value=activeQuery.toLowerCase()===w.toLowerCase()?"":w;search()};root.appendChild(b)})}
+function updateTabs(){const isSaved=mode==="saved";$("allTab").classList.toggle("active",!isSaved);$("savedTab").classList.toggle("active",isSaved);$("homeNav").classList.toggle("active",!isSaved);$("savedNav").classList.toggle("active",isSaved);$("savedCount").textContent=saved.length?"("+saved.length+")":""}
+function render(){updateTabs();const shown=mode==="saved"?jobs.filter(j=>saved.includes(key(j))):jobs;count.textContent=mode==="saved"?shown.length+" የተቀመጡ ማስታወቂያዎች":(activeQuery?shown.length+" ማስታወቂያ ተገኝቷል":"የቅርብ ጊዜ "+shown.length+" ማስታወቂያዎች");list.innerHTML="";
+if(!shown.length){list.innerHTML='<div class="empty"><strong>'+(mode==="saved"?"ገና ምንም አልተቀመጠም":"ምንም ማስታወቂያ አልተገኘም")+'</strong>'+(mode==="saved"?"የሚፈልጉትን ሥራ በ♡ ምልክት ያስቀምጡ።":"ሌላ የሥራ ቃል ይሞክሩ።")+'</div>';return}
+shown.forEach(j=>{const el=document.createElement("article");el.className="job";const isSaved=saved.includes(key(j)),link=safeLink(j.link);el.innerHTML='<div class="meta"><span class="channel">@'+esc(j.channel||"Telegram")+'</span><span>'+esc(fmtDate(j.date))+'</span></div><div class="jobtext">'+highlighted(j.text||"",activeQuery)+'</div><div class="jobfoot"><button type="button" class="more">ሙሉውን አሳይ</button><a href="'+esc(link)+'" target="_blank" rel="noopener noreferrer">በቴሌግራም ክፈት ↗</a><button type="button" class="save '+(isSaved?"saved":"")+'" aria-label="ማስቀመጥ">'+(isSaved?"♥ ተቀምጧል":"♡ አስቀምጥ")+'</button></div>';const more=el.querySelector(".more");more.onclick=()=>{el.classList.toggle("open");more.textContent=el.classList.contains("open")?"ጠቅለል አድርግ":"ሙሉውን አሳይ"};el.querySelector(".save").onclick=()=>{const k=key(j);saved=saved.includes(k)?saved.filter(x=>x!==k):[...saved,k];try{localStorage.setItem(STORE,JSON.stringify(saved))}catch{}toast(saved.includes(k)?"ማስታወቂያው ተቀምጧል":"ከተቀመጡት ተወግዷል");render()};list.appendChild(el)})}
+async function search(){activeQuery=q.value.trim();mode="all";drawChips();render();const thisRequest=++requestNo;count.textContent="በመፈለግ ላይ…";try{const res=await fetch(API+"/?q="+encodeURIComponent(activeQuery),{headers:{Accept:"application/json"}});if(!res.ok)throw new Error("HTTP "+res.status);const data=await res.json();if(!Array.isArray(data))throw new Error("Invalid response");if(thisRequest!==requestNo)return;jobs=data;try{localStorage.setItem(CACHE,JSON.stringify({query:activeQuery,jobs,at:Date.now()}))}catch{}render()}catch(e){if(thisRequest!==requestNo)return;const cached=readStore(CACHE,null);if(cached&&cached.query===activeQuery&&Array.isArray(cached.jobs)){jobs=cached.jobs;render();toast("ከተቀመጠው የመጨረሻ ውጤት አሳይተናል")}else{count.textContent="";list.innerHTML='<div class="empty"><strong>ማስታወቂያዎችን ማምጣት አልተቻለም</strong>ኢንተርኔትዎን ያረጋግጡና እንደገና ይሞክሩ።<br><button class="smallbtn" id="retry" style="margin-top:14px">እንደገና ሞክር</button></div>';$("retry").onclick=search}}}
+function showSaved(){mode="saved";activeQuery="";render()}
+$("form").addEventListener("submit",e=>{e.preventDefault();search()});q.addEventListener("change",search);$("refresh").onclick=search;$("refreshNav").onclick=search;$("clear").onclick=()=>{q.value="";search()};$("allTab").onclick=()=>{mode="all";render()};$("savedTab").onclick=showSaved;$("homeNav").onclick=()=>{mode="all";render()};$("savedNav").onclick=showSaved;
+drawChips();search();
 </script>
-</body>
-</html>
+</body></html>

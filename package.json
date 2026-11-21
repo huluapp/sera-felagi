@@ -1,0 +1,17 @@
+{
+  "name": "sera-felagi",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sera Felagi Android app",
+  "scripts": {
+    "build": "node -e \"console.log('Static web app ready for Capacitor')\"",
+    "android:sync": "cap sync android"
+  },
+  "dependencies": {
+    "@capacitor/android": "^7.4.3",
+    "@capacitor/core": "^7.4.3"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^7.4.3"
+  }
+}
